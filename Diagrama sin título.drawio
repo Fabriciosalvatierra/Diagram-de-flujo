@@ -1,10 +1,542 @@
-<mxfile host="app.diagrams.net" modified="2024-05-16T02:53:26.301Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:125.0) Gecko/20100101 Firefox/125.0" version="24.4.2" etag="38Rz-iR3vIPEa6tpqy24" type="github">
-  <diagram name="Página-1" id="H1YSKgZ1nG0BbwJZpLrO">
-    <mxGraphModel>
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-</mxfile>
+Practico1
+Ejercicio 1
+Algoritmo sin_titulo
+    Definir s1, s2, s3 como entero
+    Escribir "Ingrese tres palabras separadas por espacios:"
+    Leer s1, s2, s3
+    // Verificar cuál palabra es la mayor
+    Si s1 > s2 Y s1 > s3 Entonces
+        // Si s1 es la mayor, imprimir s1
+        Escribir s1
+    SiNo
+        // Si s1 no es la mayor, verificar si s2 es la menor
+        Si s2 < s1 Y s2 < s3 Entonces
+            // Si s2 es la menor, imprimir s2
+            Escribir s2
+        SiNo
+            // Si no, s3 es la menor, imprimir s3
+            Escribir s3
+        FinSi
+    FinSi
+FinAlgoritmo
+Ejercicio2
+Algoritmo sin_titulo
+    Definir A, B, C, x1, x2 Como Real
+    Definir r Como Real
+    // Entrada de coeficientes
+    Escribir 'Ingrese el coeficiente A:'
+    Leer A
+    Escribir 'Ingrese el coeficiente B:'
+    Leer B
+    Escribir 'Ingrese el coeficiente C:'
+    Leer C
+    // Verificar si la ecuacion es lineal
+    Si A == 0 Entonces
+        Si B <> 0 Entonces
+            // La ecuacion es lineal
+            x <- -C/B
+            Escribir 'La solucion es:', x
+        FinSi
+		// Si la ecuación no es lineal
+    SiNo
+        // Calcular discriminante
+        Si B*B - 4*A*C < 0 Entonces
+            // No hay soluciones reales
+            Escribir 'La ecuacion no tiene soluciones reales'
+        SiNo
+            // Calcular las soluciones 
+            divisor <- 2*A
+            r <- Raiz(B*B - 4*A*C)
+            x2 <- (-B - r) / divisor
+            x1 <- (-B + r) / divisor
+            // Verificar si hay soluciones múltiples
+            Si x1 == x2 Entonces
+                Escribir 'La solucion doble es: ', x1
+            SiNo
+                Escribir 'Las soluciones son: ', x1, ' y ', x2
+            FinSi
+        FinSi
+    FinSi
+FinAlgoritmo
+
+Ejercicio3
+Algoritmo DivisonEntera
+    Definir A Como Entero   
+	Definir B Como Real     
+	Definir cociente Como Real  
+    Escribir "Ingrese el valor de A:"
+    Leer A
+    Escribir "Ingrese el valor de B:"
+    Leer B
+    Si B = 0 Entonces
+        Escribir "Imposible"
+    SiNo
+        cociente <- A / B
+        Escribir "La parte entera del cociente es: "
+    FinSi
+FinAlgoritmo
+
+Ejercicio4
+Algoritmo CalculoDescuento
+	Definir N, A, B, X, i, costo_final Como Real
+	Escribir 'Ingrese el costo original'
+	Leer N
+	Escribir 'Ingrese el valor de A'
+	Leer A
+	Escribir 'Ingrese el valor de B'
+	Leer B
+	Escribir 'Ingrese el porcentaje'
+	Leer X
+	Escribir 'Ingrese el porcentaje'
+	Leer i
+	costo_con_descuento <- N
+	Si N>A Entonces
+		costo_con_descuento <- A
+	FinSi
+	Si N>B Entonces
+		costo_con_descuento <- B
+	FinSi
+	Escribir 'El costo de compra de'
+FinAlgoritmo
+
+Ejercicio5
+Algoritmo IdentificarCaracter
+	Definir c Como Cadena
+	Escribir 'Ingrese un caracter:'
+	Leer c
+	Si c>='A' Y c<='Z' Entonces
+		Escribir 'lower-case alphabet'
+	SiNo
+		Si c>='a' Y c<='z' Entonces
+			Escribir 'upper-case alphabet'
+		SiNo
+			Escribir 'non-alphabetic character'
+		FinSi
+	FinSi
+FinAlgoritmo
+
+Ejercicio6
+Algoritmo DiaSemana
+	Definir dia Como Entero
+	Escribir 'Ingrese el numero del '
+	Leer dia
+	Según dia Hacer
+		1:
+			Escribir "Lunes"
+		2:
+			Escribir "Martes"
+		3:
+			Escribir "Miercoles"
+		4:
+			Escribir "Jueves"
+		5:
+			Escribir "Viernes"
+		6:
+			Escribir "Sabado"
+		7:
+			Escribir "Domingo"
+		De Otro Modo:
+			Escribir "Numero del dia invalido"
+	FinSegún
+FinAlgoritmo
+
+Ejercicio7
+Algoritmo sin_titulo
+    Definir radio, area Como Real
+	Definir PII Como Real 
+	PII <- 3.14159265359 
+    Escribir "Ingrese el radio de la esfera:"
+    Leer radio
+    Si radio < 0 Entonces
+        Escribir "Error: El radio no puede ser negativo"
+    SiNo
+        area <- 4.0 * PI * (radio * radio) 
+        Escribir "El area de la esfera es:", area 
+	FinSi
+FinAlgoritmo
+
+Ejercicio8
+Algoritmo sin_titulo
+    Definir totalSegundos Como Entero
+    Escribir "Ingrese el número total de segundos:"
+    Leer totalSegundos
+    Si totalSegundos < 0 Entonces
+        Escribir "Error: Los segundos ingresados deben ser un número no negativo"
+    SiNo
+        horas <- totalSegundos / 3600
+        minutos <- (totalSegundos MOD 3600) / 60
+        segundos <- totalSegundos MOD 60
+        Si horas < 10 Entonces
+            Escribir "0"
+        FinSi
+        Escribir horas, ":"
+        Si minutos < 10 Entonces
+            Escribir "0"
+        FinSi
+        Escribir minutos, ":"
+        Si segundos < 10 Entonces
+            Escribir "0"
+        FinSi
+        Escribir segundos
+    FinSi
+FinAlgoritmo
+
+Ejercicio9
+Algoritmo PrimerosCaracteres
+    Definir palabra1, palabra2, palabra3 Como Cadena
+    Definir primer_caracter Como Cadena 
+    Escribir "Ingrese cinco palabras:"
+    Leer palabra1, palabra2, palabra3
+    primer_caracter <- Subcadena(palabra1, 1, 1) + Subcadena(palabra2, 1, 1) + Subcadena(palabra3, 1, 1)
+    Escribir "Los primeros caracteres de las palabras son:", primer_caracter
+    Si primer_caracter = "sub" Entonces
+        Escribir "¡Hemos encontrado algo!"
+    SiNo
+        Escribir "Aun sin suerte"
+    FinSi
+FinAlgoritmo
+
+Ejercicio10
+Algoritmo sumadigitosmultiplicada
+	Definir num1, num2, suma Como Entero	
+	Escribir 'Ingrese dos números enteros:'
+	Leer num1, num2
+	Si num1<0 O num2<0 Entonces
+		Escribir 0
+	SiNo
+		suma <- num1+num2
+		Definir digits Como Entero
+		Definir temp Como Entero
+		digits <- 0
+		temp <- suma
+		Mientras temp>0 Hacer
+			temp <- temp/10
+			digits <- digits+1
+		FinMientras
+		resul <- sum*digits
+		Escribir resul
+	FinSi
+FinAlgoritmo
+
+Ejercicio13
+Algoritmo sin_titulo
+    Definir edad, anios_experiencia Como Entero
+    // Entrada de datos
+    Escribir "Ingrese la edad del candidato:"
+    Leer edad
+    // Verificar si el candidato es menor de 18 años
+    Si edad < 18 Entonces
+        Escribir "El candidato debe tener al menos 18 años para aplicar."
+    FinSi
+    //Entraa de año de experiencia
+    Escribir "Ingrese los años de experiencia del candidato:"
+    Leer anios_experiencia
+    //Determinar el puesto elegible
+    Si anios_experiencia > 0 Entonces
+        Escribir "El candidato es elegible."
+    SiNo
+        Escribir "El candidato no cumple con los requisitos mínimos de experiencia."
+    FinSi
+	
+FinAlgoritmo
+
+Ejercicio15
+Algoritmo sin_titulo 
+    Definir a, b, c, temp Como Entero
+    // Asignación de valores a las variables
+    a <- 51
+    b <- 876
+    c <- 235
+    // Intercambio los valores entre variables
+    temp <- a
+    a <- b
+    b <- c
+    c <- temp  
+    Escribir "Los valores después del intercambio son: a=", a, " b=", b, " c=", c
+FinAlgoritmo
+
+
+Practico 2
+Ejercicio1
+Algoritmo EncontrarEspacios
+Definir line Como Cadena
+Escribir 'Introduzca su línea'
+Leer line
+line <- line + " "
+
+Para i <- 0 Hasta Longitud(line) - 1 Con Paso 1 Hacer
+	Si line[i] = " " Entonces
+		Escribir i
+	Fin Si
+Fin Para
+FinAlgoritmo
+
+Ejercicio2
+Algoritmo Separar_Palabras
+    Definir linea, palabra Como Cadena
+    Escribir "Introduzca su línea:"
+    Leer linea
+    palabra <- ""
+    Para i <- 1 Hasta Longitud(linea) Hacer
+        Si Subcadena(linea, i, 1) <> " " Entonces
+            palabra <- palabra + Subcadena(linea, i, 1)
+        Sino
+            Si palabra <> "" Entonces
+                Escribir "[" + palabra + "]"
+                palabra <- ""
+            FinSi
+        FinSi
+    FinPara
+    Si palabra <> "" Entonces
+        Escribir "[" + palabra + "]"
+    FinSi
+FinAlgoritmo
+
+Ejercicio3
+Algoritmo ContarPasteles
+    Definir pastel, contador_pasteles Como Entero
+    pastel <- 0
+    contador_pasteles <- 0
+    Escribir "Ingrese la secuencia de pasteles (0 para sin pastel, 1 para con pastel):"
+    Mientras Verdadero
+        Leer pastel
+        Si contador_pasteles >= 10 Entonces    
+        FinSi
+        Si pastel = 1 Entonces
+            Escribir "Om-nom-nom :P"
+            contador_pasteles <- contador_pasteles + 1
+        Sino
+            Si pastel = 0 Entonces
+                Escribir "No cake :("        
+            FinSi
+        FinSi
+    FinMientras
+FinAlgoritmo
+
+Ejercicio4
+Algoritmo calcularFactorial
+    Definir numero, factorial, i Como Entero
+    Escribir "Ingrese un número no negativo para calcular su factorial:"
+    Leer numero
+    Mientras numero < 0 O numero > 14 Hacer
+        Si numero < 0 Entonces
+            Escribir "El número es negativo. Intentelo de nuevo."
+        Sino
+            Escribir "El número es muy grande. El máximo permitido es 14. Intentelo de nuevo."
+        Fin Si
+        Leer numero
+    Fin Mientras
+    factorial <- 1
+    Para i <- 1 Hasta numero Con Paso 1 Hacer
+        factorial <- factorial * i
+    Fin Para
+    Escribir "El factorial de ", numero, " es: ", factorial
+FinAlgoritmo
+
+Ejercicio5
+Algoritmo ImprimirCalendario 
+    Definir n, k, dia_actual, i Como Entero
+    Escribir "Ingrese el número del día de la semana del primer día del mes (1 a 7): "
+    Leer n
+    Escribir "Ingrese el número de días en este mes (1 a 99): "
+    Leer k
+    dia_actual <- 1
+    Para i <- 1 Hasta n - 1
+        Escribir "   "
+    FinPara
+    Para i <- n Hasta 7
+        Si dia_actual < 10 Entonces
+            Escribir " ";
+        FinSi
+        Si dia_actual > k Entonces
+            Escribir "- ";
+        Sino
+            Escribir dia_actual, " ";
+        FinSi
+        Si dia_actual = k Entonces     
+        FinSi
+        dia_actual <- dia_actual + 1
+    FinPara
+    Mientras dia_actual < k
+        Escribir ""
+        Para i <- 1 Hasta 7
+            Si dia_actual > k Entonces
+                Escribir "- ";
+            Sino
+                Si dia_actual < 10 Entonces
+                    Escribir " ";
+                FinSi
+                Escribir dia_actual, " ";
+            FinSi
+            Si dia_actual = k Entonces        
+            FinSi
+            dia_actual <- dia_actual + 1
+        FinPara
+    FinMientras
+	
+FinAlgoritmo
+
+Ejercicio6
+Algoritmo sin_titulo
+	Definir n,suma Como entero
+	Escribir"Ingresa un numero"
+	leer n
+	suma=0
+	Mientras n > 0 Hacer
+		suma = suma +(n mod 10)
+		n =trunc (n/10)
+	FinMientras
+	Escribir "La suma de los digitos es:",suma
+FinAlgoritmo
+
+Ejercicio7
+Algoritmo SumaTerminosSerie
+    Definir n Como Entero
+    Definir suma Como Real
+    Definir signo Como Real
+    n <- 0
+    suma <- 0.0
+    signo <- 1.0
+    Escribir "Ingrese el número de términos (n): "
+    Leer n
+    Para i <- 1 Hasta n Con Paso 1 Hacer
+        suma <- suma + signo / i
+        signo <- -signo  // Alternamos el signo en cada iteración
+    FinPara
+    Escribir "La suma de los primeros ", n, " términos son: ", suma
+FinAlgoritmo
+
+Ejercicio10
+Algoritmo sin_titulo
+	Definir a,b,x,maximo Como Entero
+	Escribir "Ingresa dos numero "
+	Leer a,b
+	si a > 0 y b> 0 Entonces
+		maximo = 1
+		x= 1
+		Mientras  x <= a Hacer
+			si a mod x == 0 y b mod x== 0 Entonces
+				si x > maximo Entonces
+				maximo = x 
+			FinSi
+		FinSi
+		x = x + 1
+	FinMientras
+	Escribir "El maximo comun divisor es:", maximo
+SiNo
+	Escribir"Debes ingresar nuermos mayores  a cero"
+	FinSi
+FinAlgoritmo
+
+Ejercicio11
+Algoritmo calcularSecuencia
+    Definir U, n Como Real
+    U <- 1.0
+    Escribir "U0 = ", U
+    Para n <- 1 Hasta 10 Con Paso 1 Hacer
+        U <- U / (n + 1)
+        Escribir "U", n, " = ", U
+    FinPara
+FinAlgoritmo
+
+
+Ejercicio12
+Algoritmo CalcularSerieE
+    Definir m Como Entero
+    Definir e, Un, Vn Como Real
+    m <- 10 
+    e <- 1.7182818 
+    Un <- 1 
+    Vn <- 0.0 
+    Escribir "Salida:"
+    Para n <- 1 Hasta m
+        Vn <- Vn + Un 
+        Un <- Un / n 
+        Escribir "U", n, " = ", Un, " V", n, " = ", Vn
+    FinPara
+    Escribir "Verificación de convergencia a e = ", e
+    Escribir "", m, " = ", Vn
+FinAlgoritmo
+
+
+
+Ejercicio13
+Algoritmo suma_algebraica
+    Definir N, k, suma, i Como Entero
+    // Solicitar al usuario el valor de N y k
+    Escribir "Ingrese el valor de N: "
+    Leer N
+    Escribir "Ingrese el valor de k: "
+    Leer k
+    suma <- 0 // Inicializar la variable suma
+    // Calcular la suma algebraica
+    Para i <- 1 Hasta N Con Paso 1 Hacer
+        suma <- suma + i ^ k
+    FinPara
+    // Mostrar el resultado
+    Escribir "La suma algebraica es: ", suma
+FinAlgoritmo
+
+Ejercicio14
+Algoritmo Verificar_Palindromo
+    Definir num, original, reverso, digito Como Entero
+    // Solicitar al usuario el número
+    Escribir "Ingrese un numero entero: "
+    Leer num
+    original <- num
+    reverso <- 0
+    // Construir el número reverso
+    Mientras num > 0 Hacer
+        digito <- num Mod 10
+        reverso <- reverso * 10 + digito
+        num <- Trunc(num / 10)
+    FinMientras
+    // Verificar si es un palíndromo
+    Si original = reverso Entonces
+        Escribir "Es palindromo."
+    Sino
+        Escribir "No es palindromo."
+    FinSi
+FinAlgoritmo
+
+Ejercicio16
+Algoritmo Cociente_Residuo  
+    Definir dividendo, divisor, cociente, residuo Como Entero
+    Escribir "Ingrese el dividendo: "
+    Leer dividendo
+    Escribir "Ingrese el divisor: "
+    Leer divisor
+    cociente <- 0
+    residuo <- dividendo
+    Mientras residuo >= divisor Hacer
+        residuo <- residuo - divisor
+        cociente <- cociente + 1
+    FinMientras
+    Escribir cociente, " ", residuo
+FinAlgoritmo
+
+Ejercicio17
+lgoritmo Numeros_Primos
+    Definir n, contador, numero, candidato Como Entero
+    Definir esPrimo Como Logico
+    Escribir "Ingrese el valor de n: "
+    Leer n
+    contador <- 0
+    numero <- 2
+    Mientras contador < n Hacer
+        esPrimo <- Verdadero
+        candidato <- 2
+        Mientras candidato <= numero / 2 Y esPrimo Hacer
+            Si numero Mod candidato = 0 Entonces
+                esPrimo <- Falso
+            FinSi
+            candidato <- candidato + 1
+        FinMientras
+        Si esPrimo Entonces
+            Escribir numero
+            contador <- contador + 1
+        FinSi
+        numero <- numero + 1
+    FinMientras
+FinAlgoritmo
+
